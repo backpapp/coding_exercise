@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "GvtTest"
+include ':app'
+include ':data'
+include ':domain'
+include ':login'
+include ':navigation'
+include ':ui'
+include ':list'
+include ':details'
+include ':test'

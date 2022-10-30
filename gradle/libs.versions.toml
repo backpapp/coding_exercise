@@ -1,0 +1,87 @@
+[versions]
+
+activity-compose = "1.4.0"
+android-tools = "7.3.1"
+androidx-core = "1.9.0"
+appcompat = "1.5.1"
+compose = "1.3.2"
+desugar = "1.1.1"
+old_compose = "1.3.0"
+icons = "1.2.1"
+coroutines = "1.6.4"
+daggerhilt = "2.44"
+dagger-hilt-compose = "1.0.0"
+kotlin = "1.7.20"
+material = "1.0.0"
+nav-version = "2.5.3"
+retrofit = "2.9.0"
+room = "2.4.3"
+lifecycle = "2.5.1"
+zxing = "4.3.0"
+zxing-core = "3.3.0"
+
+kotest = "5.5.3"
+mockk = "1.13.2"
+turbine = "0.12.0"
+
+[plugins]
+
+android-application = { id = "com.android.application", version.ref = "android-tools" }
+android-library = { id = "com.android.library", version.ref = "android-tools" }
+dagger = { id = "com.google.dagger.hilt.android", version.ref = "daggerhilt" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+
+[libraries]
+
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+
+androidx-core = { module = "androidx.core:core-ktx", version.ref = "androidx-core" }
+
+compose-activity = { module = "androidx.activity:activity-compose", version.ref = "activity-compose" }
+compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "compose" }
+compose-icons = { module = "androidx.compose.material:material-icons-extended", version.ref = "icons" }
+compose-material = { module = "androidx.compose.material3:material3", version.ref = "material" }
+compose-navigation = { module = "androidx.navigation:navigation-compose", version.ref = "nav-version" }
+compose_preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "old_compose" }
+compose-tooling = { module = 'androidx.compose.ui:ui-tooling', version.ref = "old_compose" }
+compose-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+
+dagger-hilt = { module = "com.google.dagger:hilt-android", version.ref = "daggerhilt" }
+dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "daggerhilt" }
+dagger-hilt-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "dagger-hilt-compose" }
+
+desugar = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar" }
+
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit-mock = { module = "com.squareup.retrofit2:retrofit-mock", version.ref = "retrofit" }
+
+room = { module = "androidx.room:room-runtime", version.ref = "room" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+
+zxing = { module = "com.journeyapps:zxing-android-embedded", version.ref = "zxing" }
+zxing-core = { module = "com.google.zxing:core", version.ref = "zxing-core" }
+
+kotest-runner = { module = "io.kotest:kotest-runner-junit5-jvm", version.ref = "kotest" }
+kotest-assertion = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+
+compose-test-ui-junit = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "old_compose" }
+compose-test-ui-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "old_compose" }
+androidx-lifecycle-testing = { module = "androidx.lifecycle:lifecycle-runtime-testing", version.ref = "lifecycle" }
+navigation-testing = { module = "androidx.navigation:navigation-testing", version.ref = "nav_version" }
+turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
+
+[bundles]
+
+compose-feature = ["compose-compiler", "compose-icons", "compose-material",
+    "compose-navigation", "compose-preview", "compose-tooling", "compose-viewmodel"]
+hilt-feature = ["dagger-hilt", "dagger-hilt-compose"]
+unit-testing = ["kotest-runner", "kotest-assertion", "kotlinx-coroutines-test", "mockk", "turbine"]
+

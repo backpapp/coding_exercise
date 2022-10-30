@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="expired_error_text">The card has expired and cannot be viewed</string>
+    <string name="view_details">View card details</string>
+</resources>

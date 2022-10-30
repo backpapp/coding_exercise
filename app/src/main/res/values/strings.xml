@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GvtTest</string>
+    <string name="app_name_test">GvtTest instrumentation tests</string>
+</resources>

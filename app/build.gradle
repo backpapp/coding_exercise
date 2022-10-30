@@ -1,0 +1,77 @@
+plugins {
+    alias libs.plugins.android.application
+    alias libs.plugins.kotlin.android
+    alias libs.plugins.dagger
+    alias libs.plugins.kapt
+}
+
+android {
+    namespace 'com.backpapp.gvttest'
+    compileSdk versions.targetSdk
+
+    defaultConfig {
+        applicationId "com.backpapp.gvttest"
+        minSdk versions.minSdk
+        targetSdk versions.targetSdk
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildFeatures {
+        compose true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion libs.versions.compose.get()
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11
+    }
+    packagingOptions {
+        exclude "META-INF/LICENSE.md"
+        exclude "META-INF/LICENSE-notice.md"
+        exclude "META-INF/AL2.0"
+        exclude "META-INF/LGPL2.1"
+        exclude "META-INF/licenses/ASM"
+        pickFirst "win32-x86-64/attach_hotspot_windows.dll"
+        pickFirst "win32-x86/attach_hotspot_windows.dll"
+    }
+}
+
+
+dependencies {
+    implementation project(path: ':data')
+    implementation project(path: ':details')
+    implementation project(path: ':list')
+    implementation project(path: ':login')
+    implementation project(path: ':navigation')
+    implementation project(path: ':ui')
+
+    kapt libs.dagger.hilt.compiler
+
+    implementation libs.appcompat
+    implementation libs.compose.activity
+    implementation libs.bundles.compose.feature
+
+    implementation libs.bundles.hilt.feature
+
+    debugImplementation libs.compose.test.ui.manifest
+    androidTestImplementation libs.compose.test.ui.junit
+    androidTestImplementation libs.androidx.lifecycle.testing
+    androidTestImplementation libs.navigation.testing
+
+    kaptAndroidTest libs.dagger.hilt.compiler
+    androidTestImplementation libs.navigation.testing
+    androidTestImplementation libs.compose.test.ui.junit
+    androidTestImplementation libs.androidx.lifecycle.testing
+}

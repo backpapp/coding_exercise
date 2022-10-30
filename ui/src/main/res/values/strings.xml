@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="delete">Delete</string>
+    <string name="refresh">Refresh</string>
+    <string name="reset">Reset</string>
+    <string name="reorder">Reorder</string>
+    <string name="generic_error">Something went wrong</string>
+    <string name="cancel">Cancel</string>
+    <string name="back">Back</string>
+    <string name="dismiss">Dismiss</string>
+
+    <string name="delete_dialog_text">Are you sure want to delete this card ?</string>
+
+    <string name="blue_card">Blue card</string>
+    <string name="green_card">Green card</string>
+    <string name="purple_card">Purple card</string>
+    <string name="reference_format">Ref: %s</string>
+    <string name="no_expiration">No expiration date</string>
+    <string name="expiry_date_format">Expire: %s</string>
+    <string name="expired">Expired</string>
+
+    <string name="card_number_accessibility_format">Card number: %s</string>
+    <string name="reference_accessibility_format">Reference: %s</string>
+
+</resources>

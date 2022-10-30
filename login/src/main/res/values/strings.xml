@@ -1,0 +1,9 @@
+<resources>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="password_empty_error">Password cannot be empty</string>
+    <string name="login_empty_error">Login cannot be empty</string>
+    <string name="show_password">Show password</string>
+    <string name="hide_password">Hide password</string>
+</resources>
